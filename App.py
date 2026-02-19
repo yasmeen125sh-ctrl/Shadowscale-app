@@ -15,7 +15,7 @@ MICROARCSEC_TO_RAD = 1.0 / (206265.0e6)
 def mass_from_theta_distance_solar(theta_microas: float, distance_mpc: float) -> float:
     theta_rad = theta_microas * MICROARCSEC_TO_RAD
     distance_m = distance_mpc * MPC_TO_M
-    mass_kg = (theta_rad * (C**2) * distance_m) / (3.0 * math.sqrt(3.0) * G)
+    mass_kg = (theta_rad * (C**2) * distance_m) / (6.0 * math.sqrt(3.0) * G)
     return mass_kg / M_SUN
 
 def fit_circle(points_xy: np.ndarray):
